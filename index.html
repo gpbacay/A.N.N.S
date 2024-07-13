@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>A.N.N.S</title>
+    <link rel="icon" href="assets/ANN_logo_icon.png" type="image/x-icon">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="sidebar">
+        <button id="toggleSidebar">
+            <img src="assets/hide_sidebar_icon.png">
+        </button>
+        <div class="icon-label-container">
+            <img src="assets/ANN_logo_icon.png">
+            <h1>ARTIFICIAL NEURAL NETWORK SIMULATOR</h1>
+        </div>
+        <div class="signature-container">
+            <p class="signature">Developed by Gianne Bacay</p>
+            <img src="assets/signature_logo_icon.png" >
+        </div>
+        <hr><br>
+        <h2>Input Layer</h2>
+        <div id="inputs"></div>
+        <button id="addNode">Add Node</button>
+    </div>
+    <div class="main-content">
+        <span id="showSidebar"><img src="assets/show_sidebar_icon.png"></span>
+        <div class="main-content-wrapper">
+            <div class="network-visualization">
+                <svg id="networkSvg"></svg>
+            </div>
+            <div class="controls">
+                <button id="toggleButton">Run</button>
+                <button id="resetButton">Reset</button>
+                <input type="range" id="speed" min="1" max="10" value="1" orient="vertical">
+                <label class="label-speed" for="speed">Speed</label>
+                <div class="cycle-counter">
+                    <h2>Epoch:</h2>
+                    <p id="cycleCounter">0</p>
+                </div>
+            </div>
+        </div>
+        <div class="instructions">
+            <div class="instructions_container">
+                <h2>Instructions:</h2>
+                <ol>
+                    <li>Set input values (0-1) for each input node.</li>
+                    <li>Click 'Run' to begin the simulation.</li>
+                    <li>Adjust animation speed as needed.</li>
+                    <li>Use 'Reset' to clear the network and inputs.</li>
+                    <li>Hover over nodes for more information.</li>
+                </ol>
+            </div>
+            <div class="output-container">
+                <h2>Output:</h2>
+                <div id="outputField" class="output-field"></div>
+            </div>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>

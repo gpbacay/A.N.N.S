@@ -1,0 +1,350 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap');
+
+body {
+    font-family: 'Poppins', sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #1e1e1e;
+    color: #ffffff;
+    display: flex;
+    height: 100vh;
+    box-sizing: border-box;
+    font-size: 15px;
+}
+
+.sidebar::-webkit-scrollbar {
+    width: 10px;
+    visibility: hidden;
+}
+
+.sidebar::-webkit-scrollbar-thumb {
+    background-color: gray;
+    border-radius: 10px;
+}
+
+.sidebar::-webkit-scrollbar-thumb:hover {
+    background-color: rgb(131, 83, 229)
+}
+
+.output-field::-webkit-scrollbar {
+    width: 10px;
+    visibility: hidden;
+}
+
+.output-field::-webkit-scrollbar-thumb {
+    background-color: gray;
+    border-radius: 10px;
+}
+
+.output-field::-webkit-scrollbar-thumb:hover {
+    background-color: rgb(131, 83, 229)
+}
+
+.sidebar {
+    position: relative;
+    top: 0;
+    left: 0;
+    width: 240px;
+    min-width: 240px;
+    background-color: #2d2d2d;
+    padding: 20px;
+    border-radius: 10px;
+    border-top-left-radius: 0;
+    border-bottom-left-radius: 0;
+    margin-block: 20px;
+    overflow-y: auto;
+    transition: margin-left 0.5s ease;
+}
+
+#toggleSidebar {
+    position: absolute;
+    display: flex;
+    float: left;
+    z-index: 1001;
+    background: none;
+    border: none;
+    padding: 0;
+    margin: 0;
+    cursor: pointer;
+    width: fit-content;
+}
+
+#toggleSidebar img {
+    height: 30px;
+    width: 30px;
+}
+
+.main-content {
+    flex-grow: 1;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    margin-left: 60px;
+    transition: margin-left 0.5s ease;
+}
+
+.main-content-wrapper {
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    height: 100%;
+}
+
+.network-visualization {
+    flex-grow: 1;
+    background-color: #2d2d2d;
+    border-radius: 10px;
+    padding: 20px;
+    margin-bottom: 20px;
+    display: flex;
+    flex-direction: row;
+    align-items: stretch;
+    width: 100%;
+}
+
+.controls {
+    padding-left: 20px;
+    border-radius: 5px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-evenly;
+    align-self: center;
+    height: 100%;
+}
+
+#toggleButton {
+    color: #1e1e1e;
+}
+
+#resetButton {
+    background-color: #ff6347 !important;
+}
+
+.icon-label-container {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    height: fit-content;
+    margin-top: 40px;
+}
+
+.icon-label-container img {
+    width: 60px;
+    height: 60px;
+}
+
+h1, h2 {
+    margin-top: 0;
+    color: #ffffff;
+}
+
+h1 {
+    margin: 0px;
+}
+
+.icon-label-container h1 {
+    margin-left: 20px;
+    font-size: 22px;
+}
+
+.signature-container {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    width: 100%;
+    height: fit-content;
+}
+
+.signature-container img {
+    width: 20px;
+    height: 20px;
+    margin-left: 10px;
+}
+
+.signature {
+    margin-block: 20px;
+    font-size: 12px;
+}
+
+h2 {
+    margin: 0px;
+    font-size: 16px;
+}
+
+button {
+    background-color: #4CAF50;
+    border: none;
+    color: white;
+    padding: 10px 20px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin: 4px 2px;
+    cursor: pointer;
+    border-radius: 5px;
+    width: 100%;
+}
+
+input[type="number"] {
+    width: 60px;
+    padding: 5px;
+    margin: 5px 0;
+    background-color: #3d3d3d;
+    color: #ffffff;
+    border: 1px solid #555;
+    -moz-appearance: textfield;
+}
+
+input[type="number"]::-webkit-outer-spin-button,
+input[type="number"]::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+}
+
+input[type="range"] {
+    transform: rotate(-90deg);
+    width: 100%;
+    margin-block: 50%;
+}
+
+.label-speed {
+    width: 100%;
+    text-align: center;
+}
+
+.input-group {
+    display: flex;
+    align-items: center;
+    margin: 0px;
+    padding: 5px;
+    border-radius: 5px;
+    width: 100%;
+}
+
+.input-group label {
+    display: block;
+    margin-right: 10px;
+    cursor: pointer;
+    font-size: 15px;
+}
+
+.input-group input[type="number"] {
+    flex: 1;
+    width: 60px;
+    padding: 5px;
+    margin: 5px 0;
+    background-color: #3d3d3d;
+    color: #ffffff;
+    border: 1px solid #555;
+    -moz-appearance: textfield;
+}
+
+.input-group button {
+    width: 34px;
+    margin-left: 10px;
+    background-color: #4CAF50;
+    border: none;
+    color: white;
+    padding: 5px;
+    cursor: pointer;
+    border-radius: 5px;
+}
+
+.input-group:hover {
+    background-color: #3d3d3d;
+    cursor: pointer;
+}
+
+.delete-button {
+    background-color: #ff6347 !important; 
+    align-items: center;
+}
+
+#networkSvg {
+    width: 100%;
+    height: 100%;
+    max-width: 100%;
+}
+
+#showSidebar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    margin-right: 50px;
+    z-index: 1000;
+    display: none;
+    width: fit-content;
+    height: fit-content;
+    align-content: top;
+    margin-top: 40px;
+    padding-left: 20px;
+}
+
+#showSidebar img {
+    height: 30px;
+    width: 30px;
+}
+
+.output-container {
+    margin: 0px;
+}
+
+.instructions {
+    background-color: #2d2d2d;
+    border-radius: 10px;
+    padding: 20px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+}
+
+.instructions_container {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    margin-right: 20px;
+}
+
+.output-field {
+    display: flex;
+    background-color: #1e1e1e;
+    color: #4CAF50;
+    padding: 20px;
+    margin-top: 5px;
+    border-radius: 5px;
+    font-family: 'Courier New', Courier, monospace;
+    white-space: pre-wrap;
+    overflow-x: auto;
+    overflow-y: auto;
+    border: 1px solid #555;
+    height: 7rem;
+    width: 40rem;
+}
+
+.cycle-counter {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-evenly;
+    margin-top: 20px;
+    text-align: center;
+    background-color: #2d2d2d;
+    border-radius: 10px;
+    width: 100%;
+    height: fit-content;
+}
+
+.cycle-counter h2 {
+    margin-bottom: 5px;
+    width: fit-content;
+}
+
+.cycle-counter p {
+    font-size: 18px;
+    font-weight: bold;
+    font-family: 'Courier New', Courier, monospace;
+    width: fit-content;
+    color: #4CAF50;
+}
